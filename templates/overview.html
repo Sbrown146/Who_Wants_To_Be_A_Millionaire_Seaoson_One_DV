@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <link rel="stylesheet" href="https://bootswatch.com/4/slate/bootstrap.min.css">
+      <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+      <link rel="stylesheet" href="static/css/style.css">
+      <link rel="icon" href="data:,">
+
+      <title>Who Wants To Be A Millionaire! Game Statistics</title>
+
+</head>
+
+<body onload="overview_page_load()" id="html_background">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary bg-transparent">
+        <a class="navbar-brand" href="/">Who Wants to be a Millionaire!</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarColor01">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/" style="color: white;">Overview <span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/Overview" style="color: white;">Games Statistics</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" onclick="dropdownFunction()" style="color: white;">
+                Lifeline Statistics
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown" id="myDropdown">
+                <a class="dropdown-item" href="/Ask_The_Audience" style="color: white;">Ask The Audience</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="/50:50" style="color: white; text-align: center"> 50 : 50 </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="/Phone_A_Friend" style="color: white;">Phone A Phone</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/About" style="color: white;">About</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+
+
+    <div class="container">
+      <div class="col-md-12 jumbotron text-center" id="overview_question_area">
+        <div class="row">
+          <div class="col-md-2"></div>
+          <div class="col-md-8">
+            <h3 id="overview_question_text"></h3>
+            <p id="question_hit"></p>
+            <p id="question_five"></p>
+            <p id="question_ten"></p>
+            <p id="prize_money_common"></p>
+          </div>
+          <div class="col-md-2"></div>
+        </div>
+        <div class="col-md-12">
+          <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10 text-center" id="question_distribution"></div>
+            <div class="col-md-1"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container">
+      <div class="col-md-12 jumbotron text-center" id="money_lost_area">
+        <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+          <h3 id="money_lost_text"></h3>
+          <p id="money_lost_total"></p>
+          <p id="money_lost_mf"></p>
+        </div>
+        <div class="col-md-2"></div>
+      </div>
+      <div class="col-md-12">
+      <div class="row">
+      <div class="col-md-1"></div>
+        <div class="col-md-8 text-center" id="loss_graph"></div>
+        <div class="col-md-3"></div>
+      </div>
+    </div>
+    </div>
+  </div>
+
+<!-- Table would not go to intended place so everything was manually aligned. -->
+<div class="container">
+  <!-- <div class="row"> -->
+  <div class="jumbotron col-md-12 text-center" style = "height: 500px;">
+    <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6" id="lost_why_area">
+      <h3 id="lost_why_text"></h3>
+      <p id="lost_why_most_common"></p>
+    </div>
+    <div class="col-md-3"></div>
+  </div>
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-3 text-center" id="lost_well">
+      <h5>Choose a Question:</h5>
+      <select id="lost_select" onchange="lost_option(this.value)" style="width: 65%; color: #AAAAAA; background: hsla(0, 0%, 0%, 0);"></select>
+    </div>
+    </div>
+  <div class="row">
+  <div class="col-md-1"></div>
+  <div class="col-md-5 text-center" id="lost_button_data" style="height: 200px; border-color: #AAAAAA; margin-top: -135px; margin-left: 300px;">
+    </div> 
+    <div class="col-md-1"></div> 
+  </div>
+<!-- </div> -->
+</div>
+</div>
+
+
+
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.4/js/tether.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script type="text/javascript" src="static/js/logic.js"></script>
+  
+
+</html>

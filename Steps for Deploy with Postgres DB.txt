@@ -1,0 +1,54 @@
+ Using Sqlite:
+
+--> python initdb.py
+
+--> FLASK_APP=app.py flask run
+
+
+Using Postgres:
+
+use heroku postgres config vars from settings as SQLALCHEMY_DATABASE_URI
+
+after git push heroku master
+
+--> heroku run python initdb.py
+
+OR
+
+--> heroku run python
+--> from app import db
+--> db.create_all()
+--> exit()
+
+THEN
+
+PGUSER=username PGPASSWORD=password heroku pg:push Millionaire DATABASE_URL --app millionairedv
+
+
+TO RESET
+
+heroku pg:reset --confirm millionairedv
+
+
+IF PASSWORD PROBLEMS
+
+run in postgres --> CREATE USER username WITH SUPERUSER PASSWORD 'password';
+
+
+TO CHECK IF TABLES PUSH CORRECTLY
+
+--> heroku pg:psql --app millionairedv
+
+
+TO PULL IF FRONT END CAN SEND TO DB
+
+PGUSER=username PGPASSWORD=password heroku pg:pull DATABASE_URL millionaire --app millionairedv
+
+
+If pg_restore: error: unrecognized data block type (0) while searching archive OCCURS ON PG:PUSH:
+
+disconnect from PostgreSQL 14 Server
+connect to AWS server using DATABASE_URL config var under settings tab
+enter aws config var into server properties-> postgres://user:password@hostnameAddress:port/maintenanceDatabase
+reconnect and locate maintenanceDatabase on AWS server
+import data into schema (columns will already be set up)

@@ -1,0 +1,56 @@
+.jumbotron {
+  margin-top: 25px;
+  background-color: hsla(0, 0%, 0%, 0.60);
+}
+
+#blank {
+  margin-top: 25px;
+  background-color: hsla(0, 0%, 0%, 0);
+  border-style: none;
+}
+
+#html_background {
+  background: url("images/background_gif.gif");
+  background-size: 100% 50%;
+  background-repeat: repeat;
+
+}
+
+.navbar-inner {
+  background:transparent;
+}
+
+.nav-link {
+  color: white;
+}
+
+.fa-github-square  {
+  margin-right: 25px;
+}
+
+.fa-linkedin {
+  margin-right: 25px;
+}
+
+.about_pic {
+  border-radius: 50%;
+  border-width: medium;
+  position: relative;
+}
+
+
+
+
+/* To DO:
+ About page  -- DONE
+ 
+ Fix question transparency for $250,000 question (mention yellow, green) -- DONE
+
+ Fix bad question transparency  -- DONE
+
+ Page 2 everything (mention checkpoints, combine first two jumbos into one)
+
+ Add value array for question table on pg2.
+
+
+*/
