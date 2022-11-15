@@ -7,4 +7,4 @@ Repository for original heroku deployment. Moved to railway.app due to discontin
 
 Active railway.app repository -> https://github.com/Sbrown146/Who_Wants_To_Be_A_Millionaire_Seaoson_One_DV_Railway
 
-New railway.app website -> 
+New railway.app website -> https://millionaire-dv.up.railway.app/
