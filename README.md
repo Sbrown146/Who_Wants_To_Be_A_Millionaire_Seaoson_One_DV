@@ -5,6 +5,6 @@ App and database reconfigured on 5/31/2022 and redeployed to heroku: [millionair
 
 Repository for original heroku deployment. Moved to railway.app due to discontinuation of heroku free tier deployments using postgres.
 
-Active railway.app repository -> https://github.com/Sbrown146/Who_Wants_To_Be_A_Millionaire_Seaoson_One_DV_Railway
+Active railway.app repository -> https://github.com/Sbrown146/Millionaire_DV_Railway
 
 New railway.app website -> https://millionaire-dv.up.railway.app/
